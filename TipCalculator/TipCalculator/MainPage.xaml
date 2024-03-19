@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <!--1º Linha-->
+            <Label
+               Text="Valor:"
+                />
+                <Entry
+                    x:Name="ValueEntry"
+                    Placeholder="Digite aqui o valor da refeição"
+                    WidthRequest="500"/>
+                    
+            <HorizontalStackLayout Spacing="10">
+                <Label
+                    Text="Gorgeta:" 
+                    />
+                <Label
+                    x:Name="TigLabel"
+                    Text=" R$: 0,00"/>
+                
+                <Label
+                    Text="Valor Total:"
+                    />
+                <Label
+                    x:Name="TotalLabel"
+                    Text=" R$: 0,00"/>
+                
+                <Label
+                    Text="Porcentagem de Gorjeta:"
+                   />
+                
+                <Label
+                    x:Name="PorcenLabel"
+                    Text=" R$: 0,00"/>
+                
+            </HorizontalStackLayout>
+            <Slider 
+                    x:Name="PercentagesSlider"
+                    Minimum="0"
+                    Maximum="100"
+                    ValueChanged="PercentagesSlider_ValueChanged"/>
+           
+            <HorizontalStackLayout>
+                
+                <Button
+                    x:Name="ButtonPercento15"
+                    Text="15%"
+                    SemanticProperties.Hint="Clique aqui se você acha que o serviço foi bom"
+                    Clicked="ButtonPercento15_Clicked"
+                 />
+                <Button
+                    x:Name="ButtonPercento30"
+                    Text="30%"
+                    SemanticProperties.Hint="Clique aqui se você acha que o serviço foi ótimo"
+                    Clicked="ButtonPercento30_Clicked"
+                 />
+                <Button
+                    x:Name="ButtonUp"
+                    Text="Arredondar para cima"
+                    Clicked="ButtonUp_Clicked"
+                 />
+                <Button
+                    x:Name="ButtonDown"
+                    Text="Arredondar para Baixo"
+                    Clicked="ButtonDown_Clicked"
+                 />
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
